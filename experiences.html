@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stage - Vianney Guillou</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .internship-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .internship-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-1);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .internship-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .internship-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid var(--color-1);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--color-1);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--color-1);
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--color-1);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--color-1) transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .internship-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .internship-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .job-title {
+            background-color: var(--color-1);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        .company-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--color-2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .company-link:hover {
+            background-color: var(--color-1);
+        }
+        @media screen and (max-width: 600px) {
+            .internship-timeline::after {
+                left: 31px;
+            }
+            .internship-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .internship-item::before {
+                left: 60px;
+                border: medium solid var(--color-1);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--color-1) transparent transparent;
+            }
+            .left::after, .right::after {
+                left: 15px;
+            }
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner width-sixteen-col">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/VianneyIcone.png" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+    
+                    <ul class="s-header__menu-links">
+                        <li><a href="veille.html">Veille</a></li>
+                        <li><a href="experiences.html">Expériences</a></li>
+                        <li><a href="blog.html">A DEFINIR</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->
+
+                    <div class="s-header__contact">
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Contactez-Moi</a>                        
+                    </div> <!-- s-header__contact -->
+    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+            <!-- Header content (same as in your original file) -->
+        </header> <!-- end s-header -->
+
+        <!-- # site main content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+            <section class="s-pageheader pageheader">
+                <div class="row">
+                    <div class="column xl-12">
+                        <h1 class="page-title">
+                            <span class="page-title__small-type text-pretitle">Expérience</span>
+                            Mes Stages
+                        </h1>
+                    </div>
+                </div>
+            </section> <!-- pageheader -->  
+
+            <section class="s-pagecontent pagecontent">
+
+                <div class="row">
+                    <div class="column xl-12">
+                        
+                        <div class="internship-timeline">
+
+                            <!-- Internship 1 -->
+                            <div class="internship-item right">
+                                <div class="internship-content">
+                                    <h2>DRIEAT</h2>
+                                    <div class="job-title">Développeur Fullstack</div>
+                                    <p><strong>Durée :</strong> 2 mois</p>
+                                    <p><strong>Date :</strong> Janvier - Février 2025</p>
+                                    <img src="images/drieat.png" alt="DRIEAT Logo" class="internship-image">
+                                    <h3>Missions:</h3>
+                                    <ul>
+                                        <li>Développement Back-End (PHP, VB,VBA)</li>
+                                        <li>UI/UX (Figma, AdobeXD)</li>
+                                        <li>Homologation document (Rédaction conformité)</li>
+                                        <li>Interview et analyse besoin métier (MOE)</li>
+                                    </ul>
+                                    <a href="https://www.drieat.ile-de-france.developpement-durable.gouv.fr/" class="company-link" target="_blank">Visiter le site de DRIEAT</a>
+                                </div>
+                            </div>
+                            <div class="internship-item left">
+                                <div class="internship-content">
+                                    <h2>DRIEAT</h2>
+                                    <div class="job-title">Chef de projet SI</div>
+                                    <p><strong>Durée :</strong> 2 mois</p>
+                                    <p><strong>Date :</strong> Mai - Juin 2024</p>
+                                    <img src="images/drieat.png" alt="DRIEAT Logo" class="internship-image">
+                                    <h3>Missions:</h3>
+                                    <ul>
+                                        <li>Développement Back-End (PHP, VB,VBA)</li>
+                                        <li>UI/UX (Figma, AdobeXD)</li>
+                                        <li>Homologation document (Rédaction conformité)</li>
+                                        <li>Interview et analyse besoin métier (MOE)</li>
+                                    </ul>
+                                    <a href="https://www.drieat.ile-de-france.developpement-durable.gouv.fr/" class="company-link" target="_blank">Visiter le site de DRIEAT</a>
+                                </div>
+                            </div>
+
+                            <!-- Internship 2 -->
+                            <div class="internship-item right">
+                                <div class="internship-content">
+                                    <h2>JM Bruneau Benelux</h2>
+                                    <div class="job-title">Assistant administrateur réseaux</div>
+                                    <p><strong>Durée :</strong> 2 mois</p>
+                                    <p><strong>Date :</strong> Janvier - Février 2023</p>
+                                    <img src="images/bruneau.png" alt="Company 2 Logo" class="internship-image">
+                                    <h3>Missions:</h3>
+                                    <ul>
+                                        <li>Gestion des demandes d'incidents (JiraTicketing)</li>
+                                        <li>Dépannage et conseils aux utilisateurs</li>
+                                        <li>Configuration systèmes, OS via LAN</li>
+                                    </ul>
+                                    <a href="https://www.bruneau.fr/" class="company-link" target="_blank">Visiter le site de l'entreprise</a>
+                                </div>
+                            </div>
+
+                            <div class="internship-item left">
+                                <div class="internship-content">
+                                    <h2>PC Maestro IRLANDE</h2>
+                                    <div class="job-title">Technicien Informatiques</div>
+                                    <p><strong>Durée :</strong> 2 mois</p>
+                                    <p><strong>Date :</strong> Novembre - Décembre 2024</p>
+                                    <img src="images/Irlande.png" alt="DRIEAT Logo" class="internship-image">
+                                    <h3>Stage en IRLANDE</h3>
+                                    <ul>
+                                        <li>Suite à l’obtention d’une bourse Erasmus + ma motivation m’a amené un effectuer un stage dans le domaine de 
+                                            l’informatique d’une durée de 1 mois à Cork, la deuxième plus grande ville d’Irlande 
+                                            pour améliorer mes compétences technique et linguistique.
+                                        </li>
+                                    </ul>
+                                    <a href="https://pcmaestro.ie/" class="company-link" target="_blank">Visiter le site de DRIEAT</a>
+                                </div>
+                            </div>
+
+                            <div class="internship-item right">
+                                <div class="internship-content">
+                                    <h2>SuperSonique Studio</h2>
+                                    <div class="job-title">Assistant de Communication marketing et développement web</div>
+                                    <p><strong>Durée :</strong> 2 mois</p>
+                                    <p><strong>Date :</strong> Juin - Juillet 2020</p>
+                                    <img src="images/supersonique.png" alt="Company 2 Logo" class="internship-image">
+                                    <h3>Missions:</h3>
+                                    <ul>
+                                        <li>WordPress.org</li>
+                                        <li>Gestion suivie et relation client</li>
+                                        <li>Suite adobe (PremièrePro, Photoshop)</li>
+                                        <li>Suite office (Word, Excel)</li>
+                                        <Li>Gestion Réseau sociaux clients et programmation de media planning (Instagram, facebook, linkedin...)</Li>
+                                    </ul>
+                                    <a href="https://supersonique-studio.com/" class="company-link" target="_blank">Visiter le site de l'entreprise</a>
+                                </div>
+                            </div>
+
+                            <!-- Add more internship items as needed, alternating between 'left' and 'right' classes -->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section> <!-- pagecontent -->
+
+        </section> <!-- s-content -->
+
+        <!-- # footer 
+        ================================================== -->
+        <footer class="s-footer">
+            <!-- Footer content (same as in your original file) -->
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
